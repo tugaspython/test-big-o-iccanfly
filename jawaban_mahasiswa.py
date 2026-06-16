@@ -1,8 +1,8 @@
-def cari_pasangan(arr, target):
-    seen = set()
-    for num in arr:
-        complement = target - num
-        if complement in seen and complement != num:
-            return True
-        seen.add(num)
-    return False
+ def cari_pasangan(arr: Iterable[float], target: float) -> bool:
+     """True jika ada dua elemen (indeks berbeda) di arr yang jumlahnya == target."""
+     seen = set()
+     for x in arr:
+         if (target - x) in seen:
+             return True
+         seen.add(x)
+     return False
